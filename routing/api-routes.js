@@ -11,7 +11,8 @@ router.post('/notes',(req,res) => {
 
     let noteModel = {
         title: req.body.title,
-        text: req.body.text
+        text: req.body.text,
+        id: Math.floor(Math.random()*1000)
         //Note: Put the random id here.
     }
 
@@ -20,6 +21,12 @@ router.post('/notes',(req,res) => {
     fs.writeFileSync("./db/db.json",JSON.stringify(dbFile));
     //Converts back to object
     res.json(dbFile);
+})
+
+router.delete('/notes/:id',(req,res) => {
+    // fs.writeFileSync("./db/db.json",JSON.stringify(dbFile));
+    // //Converts back to object
+    // res.json(dbFile);
 })
 
 module.exports = router;
