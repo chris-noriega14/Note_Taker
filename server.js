@@ -1,8 +1,8 @@
 const express = require('express');
 const viewRoutes = require('./routing/view-routes');
 const apiRoutes = require('./routing/api-routes');
+const PORT = process.env.PORT || 3001;
 
-const PORT = 3001;
 const app = express();
 
 app.use(express.json());
