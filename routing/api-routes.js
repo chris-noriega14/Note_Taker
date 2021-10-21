@@ -23,10 +23,10 @@ router.post('/notes',(req,res) => {
     res.json(dbFile);
 })
 
-router.delete('/notes/:id',(req,res) => {
-    // fs.writeFileSync("./db/db.json",JSON.stringify(dbFile));
-    // //Converts back to object
-    // res.json(dbFile);
-})
+// router.delete('/notes/:id',(req,res) => {
+//     // fs.writeFileSync("./db/db.json",JSON.stringify(dbFile));
+//     // //Converts back to object
+//     // res.json(dbFile);
+// })
 
 module.exports = router;
